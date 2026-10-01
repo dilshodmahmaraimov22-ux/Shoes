@@ -1,0 +1,199 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  position: relative;
+  z-index: 100;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+/* ---------- Yuqori qism (qora) ---------- */
+.header__container {
+  background: #202020;
+}
+.header {
+  background: #202020;
+  border-top: 3px solid #3b82f6;
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header__img { display: block; flex-shrink: 0; }
+.header__logo { height: 52px; width: auto; }
+.header__location { height: 34px; width: auto; }
+
+.header__text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+  max-width: 230px;
+}
+
+.header__socials { display: flex; gap: 14px; }
+
+.header__link {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #9c7248;
+  color: #fff;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background .25s, transform .25s;
+}
+.header__link:hover { background: #b88a5a; transform: translateY(-2px); }
+
+.header__link2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #9c7248;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background .25s;
+}
+.header__link2:hover { background: #b88a5a; }
+
+/* ---------- Nav (jigarrang) ---------- */
+.nav {
+  position: relative;
+  background: linear-gradient(90deg, #8f6a47, #a77d56 50%, #8f6a47);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .35);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px 56px;
+}
+
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity .2s;
+}
+.nav__link:hover { opacity: .8; }
+
+.nav__dropdown { position: relative; }
+
+.nav__menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 160px;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  animation: fadeIn .2s ease;
+}
+.nav__menu a {
+  color: #202020;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav__menu a:hover { color: #9c7248; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -6px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ---------- Responsive ---------- */
+
+/* Planshet */
+@media (max-width: 992px) {
+  .header__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .header__item { width: 100%; flex-wrap: wrap; }
+  .header__text { max-width: none; }
+  .nav__list { gap: 4px 36px; }
+  .nav__link { font-size: 16px; }
+}
+
+/* Telefon */
+@media (max-width: 600px) {
+  .container { padding: 0 14px; }
+
+  .header__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .header__list { align-items: center; }
+  .header__text { text-align: center; }
+  .header__socials { justify-content: center; }
+  .header__link2 { width: 100%; justify-content: center; }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .nav__link { padding: 12px 0; font-size: 16px; }
+
+  /* dropdown telefonda oddiy blok bo'lib ochiladi */
+  .nav__menu {
+    position: static;
+    transform: none;
+    animation: none;
+    margin-bottom: 10px;
+    width: 220px;
+  }
+}
+
+/* Juda kichik ekranlar */
+@media (max-width: 360px) {
+  .header__logo { height: 42px; }
+  .header__link { width: 40px; height: 40px; font-size: 20px; }
+}
