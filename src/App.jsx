@@ -2,11 +2,9 @@
  
  const App = () => {
    return (
-     <div>
-      <>
-      <h1>salom dunyo</h1>
-      </>
-     </div>
+    <>
+    <h1>Salom</h1>
+    </>
    )
  }
  
