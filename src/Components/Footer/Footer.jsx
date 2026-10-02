@@ -1,5 +1,5 @@
 import React from 'react'
-import map from '../Images.map.png'
+import map from '../Images/map1.png'
 import { Link } from 'react-router-dom'
 import { FaPhone } from 'react-icons/fa'
 
@@ -23,12 +23,12 @@ const Footer = () => {
             </li>
             <li className='footer__item2'>
               <p className='footer__text2'>Lorem Ipsum is simply dummy text of the printing and </p>
-              <Link className='footer__link'><FaPhone/>+7 (999) 999-09-99</Link>
+              <Link to='#' className='footer__link'><FaPhone/>+7 999 999-09-99</Link>
               <div className='footer__links'>
-                <Link className='footer__link2'>Главная</Link>
-                <Link className='footer__link2'>Контентная страница</Link>
-                <Link className='footer__link2'>Видео галерея</Link>
-                <Link className='footer__link2'>Фото галерея</Link>
+                <Link to='#' className='footer__link2'>Главная</Link>
+                <Link to='#' className='footer__link2'>Контентная страница</Link>
+                <Link to='#' className='footer__link2'>Видео галерея</Link>
+                <Link to='#' className='footer__link2'>Фото галерея</Link>
               </div>
             </li>
           </ul>
