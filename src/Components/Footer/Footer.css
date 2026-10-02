@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.footer__map-section {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer__map-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1) grayscale(30%);
+  z-index: 1;
+}
+
+.footer__map-section .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.footer__address-card {
+  max-width: 440px;
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.footer__address-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.footer__address-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d8d8d8;
+  font-weight: 300;
+}
+
+.footer__bottom {
+  background-color: #000000;
+  padding: 50px 0 60px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer__bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer__brand-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.footer__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #a0a0a0;
+  max-width: 300px;
+}
+
+.footer__phone-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+}
+
+.footer__phone-btn:hover {
+  background-color: #e2e2e2;
+  transform: translateY(-2px);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #888888;
+}
+
+@media (max-width: 992px) {
+  .footer__bottom-container {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer__col {
+    flex: 1 1 45%;
+  }
+
+  .footer__map-section {
+    height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__map-section {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .footer__address-card {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+
+  .footer__address-title {
+    font-size: 28px;
+  }
+
+  .footer__bottom-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer__col {
+    width: 100%;
+  }
+
+  .footer__desc {
+    max-width: 100%;
+  }
+}

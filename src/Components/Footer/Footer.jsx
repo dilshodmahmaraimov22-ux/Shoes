@@ -1,41 +1,60 @@
 import React from 'react'
-import map from '../Images/map1.png'
 import { Link } from 'react-router-dom'
 import { FaPhone } from 'react-icons/fa'
+import map from '../Images/map1.png'
+import leo from '../Images/leo.png'
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <>
     <footer className='footer'>
-      <div className="container">
-        <div className="footer__container">
-          <ul className='footer__list'>
-            <li className='footer__item'>
-              <img className='footer__img' src={map} alt="" />
-              <h1 className='footer__title'>Адреса</h1>
-              <p className='footer__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            </li>
-          </ul>
-          <ul className='footer__list2'>
-            <li className='footer__item2'>
-              <h1 className='footer__title2'>REFRESHOES</h1>
-              <p className='footer__text2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </li>
-            <li className='footer__item2'>
-              <p className='footer__text2'>Lorem Ipsum is simply dummy text of the printing and </p>
-              <Link to='#' className='footer__link'><FaPhone/>+7 999 999-09-99</Link>
-              <div className='footer__links'>
-                <Link to='#' className='footer__link2'>Главная</Link>
-                <Link to='#' className='footer__link2'>Контентная страница</Link>
-                <Link to='#' className='footer__link2'>Видео галерея</Link>
-                <Link to='#' className='footer__link2'>Фото галерея</Link>
+      <div className="footer__map-section">
+        <img className='footer__map-img' src={map} alt="Map" />
+        <div className="container">
+          <div className='footer__address-card'>
+            <h1 className='footer__address-title'>Адреса</h1>
+            <p className='footer__address-text'>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer__bottom">
+        <div className="container">
+          <div className="footer__bottom-container">
+
+            <div className='footer__col'>
+              <div className="footer__brand">
+                <img className='footer__logo' src={leo} alt="Logo" />
+                <h2 className='footer__brand-title'>Refreshoes</h2>
               </div>
-            </li>
-          </ul>
+              <p className='footer__desc'>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              </p>
+            </div>
+
+            <div className='footer__col'>
+              <p className='footer__desc'>
+                Lorem Ipsum is simply dummy text of the printing and
+              </p>
+              <Link to='tel:+79999990999' className='footer__phone-btn'>
+                <FaPhone /> +7 (999) 999-09-99
+              </Link>
+            </div>
+
+            <div className='footer__col footer__links'>
+              <Link to='#' className='footer__link'>Главная</Link>
+              <Link to='#' className='footer__link'>Контентная страница</Link>
+              <Link to='#' className='footer__link'>Галерея</Link>
+              <Link to='#' className='footer__link'>Видео галерея</Link>
+              <Link to='#' className='footer__link'>Фото галерея</Link>
+            </div>
+
+          </div>
         </div>
       </div>
     </footer>
-    </>
   )
 }
 
