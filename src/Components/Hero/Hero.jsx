@@ -10,24 +10,20 @@ const Hero = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Keyingi rasm
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  // Oldingi rasm
   const handlePrev = () => {
     setCurrentIndex((prev) =>
       prev === 0 ? images.length - 1 : prev - 1
     );
   };
 
-  // Nuqta bosilganda
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
 
-  // Har 5 soniyada avtomatik almashtirish
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
