@@ -1,0 +1,116 @@
+.hero {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Slayderning doimiy o'lchami */
+.hero__slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 480px; /* Rasmlarning balandligi aniq belgilandi */
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* RASMLARNI BIR XIL O'LCHAMGA KELTIRUVCHI ASOSIY QISMI */
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Har xil o'lchamdagi rasmlarni buzmay (deformatsiya qilmay) konteynerga sig'diradi */
+  object-position: center; /* Rasmni o'rtasidan qirqib ko'rsatadi */
+  display: block;
+}
+
+/* Chap va o'ng tugmalar */
+.hero__prev,
+.hero__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.hero__prev:hover,
+.hero__next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero__prev {
+  left: 16px;
+}
+
+.hero__next {
+  right: 16px;
+}
+
+/* Nuqtalar (Dots) */
+.hero__dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.hero__dot.active {
+  background-color: #d4a359;
+  transform: scale(1.2);
+}
+
+/* Responsivelik (Mobil va planshetlar uchun o'lchamlar) */
+@media (max-width: 768px) {
+  .hero__slider {
+    height: 320px;
+  }
+
+  .hero__prev,
+  .hero__next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__slider {
+    height: 220px;
+  }
+}
