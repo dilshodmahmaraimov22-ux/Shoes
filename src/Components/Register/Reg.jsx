@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Reg.css'
 import { Link } from 'react-router-dom'
 
 const Reg = () => {
+    const [text, setText] = useState("");
+    const [number, setNumber] = useState();
+
+    const sendMessage = (e)=>{
+        e.preventDefault();
+        console.log(text, number);
+        
+    }
   return (
     <>
     <div className="reg">
@@ -24,12 +32,22 @@ const Reg = () => {
                         </form>
                     </li>
                     <li className='reg__item2'>
-                        <form className='reg__form2'>
+                        <form onSubmit={sendMessage} className='reg__form2'>
                             <label htmlFor="title2">Авторизации</label>
-                            <input className='reg__input2' type="e-mail" placeholder='E-mail' />
-                            <input className='reg__input2' type="password" placeholder='Пароль' />
+                            <input className='reg__input2' 
+                            type="email" 
+                            placeholder='E-mail' 
+                            value={text}
+                            onChange={(e)=>setText(e.target.value)}
+                            />
+                            <input className='reg__input2' 
+                            type="password" 
+                            placeholder='Пароль' 
+                            value={number}
+                            onChange={(e)=>setNumber(e.target.value)}
+                            />
                             <Link className='reg__link'>Восстановить пароль</Link>
-                            <button className='reg__btn2'>Отправить</button>
+                            <button type='submit' className='reg__btn2'>Отправить</button>
                         </form>
                     </li>
                 </ul>
