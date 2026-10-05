@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fon va asosiy konteyner */
+.input {
+  min-height: 100vh;
+  background-color: #212121;
+  color: #ffffff;
+  padding: 80px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Asosiy ul va li layout */
+.input__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.input__item {
+  flex: 1;
+  min-width: 320px;
+}
+
+.input__item--buttons {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+/* Sarlavha */
+.input__title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 35px;
+  max-width: 420px;
+  line-height: 1.3;
+}
+
+/* Checkbox stili */
+.input__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.input__flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.input__inp {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #777777;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.input__inp:checked {
+  border-color: #ffffff;
+  background-color: transparent;
+}
+
+.input__inp:checked::after {
+  content: '✓';
+  position: absolute;
+  color: #ffffff;
+  font-size: 13px;
+  top: -2px;
+  left: 3px;
+  font-weight: bold;
+}
+
+.input__text {
+  font-size: 14px;
+  color: #dddddd;
+  user-select: none;
+}
+
+/* Radio Sektsiyasi va Strelka (Pointer) */
+.input__radio-section {
+  position: relative;
+  margin-top: 20px;
+}
+
+.input__pointer {
+  position: absolute;
+  top: -42px;
+  left: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.input__title2 {
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.input__arrow {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+/* Radio-knopkalar Flex konteyneri */
+.input__radio-flex {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.input__radio-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input__flex2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+/* Custom Radio Button Stili */
+.input__radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #777777;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.input__radio:checked {
+  border-color: #a47144;
+}
+
+.input__radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #a47144;
+  border-radius: 50%;
+}
+
+.input__text2 {
+  font-size: 16px;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* Tugmalar Stili (Buttons) */
+.input__btn {
+  width: 100%;
+  padding: 18px 30px;
+  background-color: #a47144; /* Bronza/Oltinsimon jigarang */
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.input__btn:hover {
+  background-color: #8e6038;
+}
+
+.input__btn2 {
+  width: 100%;
+  padding: 18px 30px;
+  background-color: #583519; /* To'q jigarang */
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.input__btn2:hover {
+  background-color: #452913;
+}
+
+.input__btn:active,
+.input__btn2:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================
+   RESPONSIVE (Mobil va Planshetlar uchun)
+   ========================================== */
+@media (max-width: 992px) {
+  .input__list {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .input__item--buttons {
+    max-width: 100%;
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .input {
+    padding: 40px 16px;
+  }
+
+  .input__title {
+    font-size: 20px;
+  }
+
+  .input__radio-flex {
+    gap: 30px;
+  }
+
+  .input__pointer {
+    left: 80px;
+    top: -45px;
+  }
+
+  .input__btn,
+  .input__btn2 {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+}
