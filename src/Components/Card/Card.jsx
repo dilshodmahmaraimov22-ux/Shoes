@@ -18,7 +18,7 @@ export const Card = () => {
                 <ul className='card__list'>
                     <li className='card__item'>
                         <img className='card__img' src={shop1} alt="trainers" />
-                        <p className='card__text'></p>
+                        <p className='card__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
                     </li>
                 </ul>
             </div>
