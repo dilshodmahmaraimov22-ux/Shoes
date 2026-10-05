@@ -3,7 +3,7 @@ import Hero from '../../Components/Hero/Hero'
 import Reg from '../../Components/Register/Reg'
 import Input from '../../Components/Input/Input'
 import Table from '../../Components/Table/Table'
-import Shop from '../../Components/Shop/Shop'
+import Swipe from '../../Components/Swipe/Swipe'
 
 const Rasm = () => {
   return (
@@ -12,7 +12,7 @@ const Rasm = () => {
     <Reg/>
     <Input/>
     <Table/>
-    <Shop/>
+    <Swipe/>
     </>
   )
 }
