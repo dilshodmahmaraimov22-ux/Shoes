@@ -16,7 +16,15 @@ const Reg = () => {
         const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
         
         try{
-            axios
+            await axios.post(url,{
+                chat_id: chat_id,
+                text: xabar,
+            })
+            setText("");
+            setNumber("");
+        }
+        catch{
+            alert("nimadur xato")
         }
     }
   return (
