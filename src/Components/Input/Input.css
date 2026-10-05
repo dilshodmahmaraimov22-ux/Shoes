@@ -7,7 +7,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Fon va asosiy konteyner */
 .input {
   min-height: 100vh;
   background-color: #212121;
@@ -24,7 +23,6 @@
   margin: 0 auto;
 }
 
-/* Asosiy ul va li layout */
 .input__list {
   list-style: none;
   display: flex;
@@ -32,6 +30,7 @@
   align-items: flex-start;
   gap: 60px;
   flex-wrap: wrap;
+  margin-top: 0px;
 }
 
 .input__item {
@@ -47,7 +46,6 @@
   padding-top: 40px;
 }
 
-/* Sarlavha */
 .input__title {
   font-size: 26px;
   font-weight: 500;
@@ -57,7 +55,6 @@
   line-height: 1.3;
 }
 
-/* Checkbox stili */
 .input__checkbox-group {
   display: flex;
   flex-direction: column;
@@ -107,7 +104,6 @@
   user-select: none;
 }
 
-/* Radio Sektsiyasi va Strelka (Pointer) */
 .input__radio-section {
   position: relative;
   margin-top: 20px;
@@ -139,7 +135,6 @@
   letter-spacing: -2px;
 }
 
-/* Radio-knopkalar Flex konteyneri */
 .input__radio-flex {
   display: flex;
   gap: 60px;
@@ -159,7 +154,6 @@
   cursor: pointer;
 }
 
-/* Custom Radio Button Stili */
 .input__radio {
   appearance: none;
   -webkit-appearance: none;
@@ -196,11 +190,10 @@
   user-select: none;
 }
 
-/* Tugmalar Stili (Buttons) */
 .input__btn {
   width: 100%;
   padding: 18px 30px;
-  background-color: #a47144; /* Bronza/Oltinsimon jigarang */
+  background-color: #a47144;
   color: #ffffff;
   border: none;
   border-radius: 40px;
@@ -217,7 +210,7 @@
 .input__btn2 {
   width: 100%;
   padding: 18px 30px;
-  background-color: #583519; /* To'q jigarang */
+  background-color: #583519;
   color: #ffffff;
   border: none;
   border-radius: 40px;
@@ -236,9 +229,6 @@
   transform: scale(0.98);
 }
 
-/* ==========================================
-   RESPONSIVE (Mobil va Planshetlar uchun)
-   ========================================== */
 @media (max-width: 992px) {
   .input__list {
     flex-direction: column;

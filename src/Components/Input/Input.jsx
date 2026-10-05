@@ -12,7 +12,6 @@ const Input = () => {
                 элементы чекбоксов, радио кнопок, выбор из списка
               </h1>
 
-              {/* Checkboxlar bloki */}
               <div className="input__checkbox-group">
                 <label className="input__flex">
                   <input className="input__inp" type="checkbox" />
@@ -24,16 +23,13 @@ const Input = () => {
                 </label>
               </div>
 
-              {/* Radio-knopkalar va strelka bloki */}
               <div className="input__radio-section">
-                {/* Aktiv holat ko'rsatkichi (Strelka) */}
                 <div className="input__pointer">
                   <span className="input__title2">Активная<br />Радио-кнопка</span>
                   <div className="input__arrow">→</div>
                 </div>
 
                 <div className="input__radio-flex">
-                  {/* Chap ustun (Unchecked) */}
                   <div className="input__radio-col">
                     <label className="input__flex2">
                       <input className="input__radio" type="radio" name="group1" />
@@ -49,7 +45,6 @@ const Input = () => {
                     </label>
                   </div>
 
-                  {/* O'ng ustun (1-si active) */}
                   <div className="input__radio-col">
                     <label className="input__flex2">
                       <input className="input__radio" type="radio" name="group2" defaultChecked />
@@ -68,7 +63,6 @@ const Input = () => {
               </div>
             </li>
 
-            {/* O'ng tarafdagi tugmalar bloki */}
             <li className="input__item input__item--buttons">
               <button className="input__btn">Отправить</button>
               <button className="input__btn2">Отмена</button>
