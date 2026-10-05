@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bg: #212121;
+  --text: #ffffff;
+  --border: #d9d9d9;
+  --quote-bg: #332a20;
+  --quote-accent: #9a6b41;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.table {
+  background: var(--bg);
+  color: var(--text);
+  padding: 8px 0 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- umumiy ---------- */
+.table__section + .table__section {
+  margin-top: 56px;
+}
+
+.table__title {
+  margin: 0 0 14px;
+  font-size: clamp(17px, 1.6vw + 12px, 20px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* ---------- 1. SELECT ---------- */
+.table__selects {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  min-height: 240px; /* ochiq ro'yxat uchun joy */
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  font-size: 14px;
+}
+
+.select__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  height: 42px;
+  padding: 0 14px 0 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.select__control:focus-visible,
+.select__item:focus-visible {
+  outline: 2px solid var(--quote-accent);
+  outline-offset: 2px;
+}
+
+.select__value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.select__arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.select--open .select__arrow {
+  transform: rotate(180deg);
+}
+
+.select__list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.select__item {
+  padding: 7px 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.select__item:hover,
+.select__item[aria-selected='true'] {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- 2. SPISOKLAR ---------- */
+.table__lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 64px;
+}
+
+.table__ul,
+.table__ol {
+  margin: 0;
+  padding-left: 24px;
+  font-size: clamp(15px, 1vw + 11px, 18px);
+  line-height: 1.12;
+}
+
+.table__ul > li,
+.table__ol > li {
+  padding-left: 4px;
+}
+
+.table__ul li {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.table__ol > li {
+  margin-bottom: 8px;
+}
+
+.table__ol > li > ul {
+  margin: 6px 0 0;
+  padding-left: 34px;
+}
+
+.table__ol > li > ul > li {
+  margin-bottom: 9px;
+  padding-left: 4px;
+}
+
+/* ---------- 3. BLOCKQUOTE ---------- */
+.quote {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 0;
+  padding: 18px 28px 18px 18px;
+  background: var(--quote-bg);
+  border-left: 4px solid var(--quote-accent);
+}
+
+.quote__icon {
+  flex-shrink: 0;
+  width: 36px;
+  margin-top: -6px;
+  color: var(--quote-accent);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 90px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1;
+  user-select: none;
+}
+
+.quote__body {
+  min-width: 0;
+}
+
+.quote__text {
+  margin: 0 0 12px;
+  font-size: 12.5px;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.quote__author {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .table {
+    padding-bottom: 48px;
+  }
+
+  .table__section + .table__section {
+    margin-top: 40px;
+  }
+
+  .table__lists {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .quote {
+    padding: 16px 16px 16px 12px;
+  }
+
+  .quote__icon {
+    width: 28px;
+    font-size: 70px;
+  }
+
+  .quote__text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 600px) {
+  .table__selects {
+    flex-direction: column;
+    gap: 14px;
+    min-height: 0;
+    margin-bottom: 190px; /* ochiq ro'yxat keyingi bloklarni yopib qo'ymasligi uchun */
+  }
+
+  .select {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .table__ul,
+  .table__ol {
+    padding-left: 18px;
+  }
+
+  .table__ol > li > ul {
+    padding-left: 24px;
+  }
+
+  .quote {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .quote__icon {
+    height: 40px;
+    margin-top: 0;
+  }
+}
