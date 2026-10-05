@@ -15,7 +15,6 @@ const Select = ({ placeholder = 'Lorem ipsun', options = OPTIONS, defaultOpen = 
   const [value, setValue] = useState('')
   const ref = useRef(null)
 
-  // tashqariga bosilganda yoki Escape bosilganda yopiladi
   useEffect(() => {
     const onClick = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setOpen(false)
@@ -76,7 +75,6 @@ const Table = () => {
       <div className="table">
         <div className="container">
           <div className="table__container">
-            {/* 1. Выбор из списка */}
             <section className="table__section">
               <h1 className="table__title">выбор из списка</h1>
               <div className="table__selects">
@@ -85,7 +83,6 @@ const Table = () => {
               </div>
             </section>
 
-            {/* 2. Списки */}
             <section className="table__section table__lists">
               <div className="table__col">
                 <h2 className="table__title">неупорядоченный</h2>
@@ -122,7 +119,6 @@ const Table = () => {
               </div>
             </section>
 
-            {/* 3. Blockquote */}
             <section className="table__section">
               <h2 className="table__title">Блок цитаты blockquote</h2>
               <blockquote className="quote">

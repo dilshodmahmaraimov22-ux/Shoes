@@ -32,7 +32,6 @@ body {
   padding: 0 16px;
 }
 
-/* ---------- umumiy ---------- */
 .table__section + .table__section {
   margin-top: 56px;
 }
@@ -44,12 +43,11 @@ body {
   line-height: 1.2;
 }
 
-/* ---------- 1. SELECT ---------- */
 .table__selects {
   display: flex;
   gap: 18px;
   align-items: flex-start;
-  min-height: 240px; /* ochiq ro'yxat uchun joy */
+  min-height: 240px;
 }
 
 .select {
@@ -125,7 +123,6 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- 2. SPISOKLAR ---------- */
 .table__lists {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -164,7 +161,6 @@ body {
   padding-left: 4px;
 }
 
-/* ---------- 3. BLOCKQUOTE ---------- */
 .quote {
   display: flex;
   gap: 12px;
@@ -205,7 +201,6 @@ body {
   font-style: italic;
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .table {
     padding-bottom: 48px;
@@ -240,7 +235,7 @@ body {
     flex-direction: column;
     gap: 14px;
     min-height: 0;
-    margin-bottom: 190px; /* ochiq ro'yxat keyingi bloklarni yopib qo'ymasligi uchun */
+    margin-bottom: 190px;
   }
 
   .select {
