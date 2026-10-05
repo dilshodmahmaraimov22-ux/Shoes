@@ -7,7 +7,6 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Asosiy fon va konteyner */
 .reg {
   min-height: 100vh;
   background-color: #1a1a1a;
@@ -25,7 +24,6 @@
   flex-direction: column;
 }
 
-/* Yuqori sarlavhalar (Header titles) */
 .reg__title {
   font-size: 60px;
   font-weight: 700;
@@ -36,7 +34,6 @@
   line-height: 1.1;
 }
 
-/* Breadcrumbs (Xlebniye kroshki) */
 .reg__title2 {
   font-size: 20px;
   font-weight: 400;
@@ -49,8 +46,6 @@
   color: #888888;
   margin-bottom: 50px;
 }
-
-/* Card lar ro'yxati (ul) */
 .reg__list {
   list-style: none;
   display: flex;
@@ -60,9 +55,6 @@
   margin-bottom: 80px;
 }
 
-/* ========================================================
-   1-FORMA CARD (Ro'yxatdan o'tish - reg__item)
-   ======================================================== */
 .reg__item {
   flex: 1;
   min-width: 320px;
@@ -82,13 +74,12 @@
 .reg__from > label {
   font-size: 38px;
   font-weight: 700;
-  color: #aa7144; /* Rasmdagi jigarrang/oltinsimon rang */
+  color: #aa7144;
   text-align: center;
   margin-bottom: 30px;
   display: block;
 }
 
-/* 1-Forma Inputlari */
 .reg__input {
   width: 100%;
   padding: 16px 22px;
@@ -110,7 +101,6 @@
   border-color: #aa7144;
 }
 
-/* Checkbox va matn joylashuvi */
 .reg__radio {
   appearance: none;
   -webkit-appearance: none;
@@ -149,7 +139,6 @@
   margin-bottom: 25px;
 }
 
-/* 1-Forma Tugmasi */
 .reg__btn {
   width: 100%;
   padding: 16px;
@@ -160,17 +149,19 @@
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: auto;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
+}
+
+.reg__flex{
+  display: flex;
+  gap: 20px;
 }
 
 .reg__btn:hover {
   background-color: #925f37;
 }
 
-/* ========================================================
-   2-FORMA CARD (Avtorizatsiya - reg__item2)
-   ======================================================== */
 .reg__item2 {
   flex: 1;
   min-width: 320px;
@@ -196,7 +187,6 @@
   display: block;
 }
 
-/* 2-Forma Inputlari */
 .reg__input2 {
   width: 100%;
   padding: 16px 22px;
@@ -218,7 +208,6 @@
   border-color: #aa7144;
 }
 
-/* "Восстановить пароль" Havolasi */
 .reg__link {
   display: block;
   text-align: center;
@@ -234,7 +223,6 @@
   opacity: 0.8;
 }
 
-/* 2-Forma Tugmasi */
 .reg__btn2 {
   width: 100%;
   padding: 16px;
@@ -253,9 +241,6 @@
   background-color: #925f37;
 }
 
-/* ========================================================
-   RESPONSIVE (Mobil va Planshet moslashuvchanligi)
-   ======================================================== */
 @media (max-width: 992px) {
   .reg__title {
     font-size: 44px;

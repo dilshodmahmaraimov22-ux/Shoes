@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import './Reg.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const Reg = () => {
     const [text, setText] = useState("");
-    const [number, setNumber] = useState();
+    const [number, setNumber] = useState("");
 
-    const BOT_TOKEN = "AAF8Plq3fObfaTIkKH2JEcrbmsJFMD6FZ0c";
-    const chat_id = "6812225312";
+    const BOT_TOKEN = 'AAF8Plq3fObfaTIkKH2JEcrbmsJFMD6FZ0c';
+    const chat_id = '6812225312';
 
     const sendMessage = async(e)=>{
         e.preventDefault();
@@ -22,8 +23,7 @@ const Reg = () => {
             })
             setText("");
             setNumber("");
-        }
-        catch{
+        }catch{
             alert("nimadur xato")
         }
     }
@@ -43,7 +43,9 @@ const Reg = () => {
                             <input className='reg__input' type="text" placeholder='Имя'/>
                             <input className='reg__input' type="phone" placeholder='Телефон'/>
                             <input className='reg__input' type="e-mail" placeholder='E-mail'/>
-                            <input className='reg__radio' type="checkbox" /> <p className='reg__text2'>Соглашаюсь на обратку персональных данных</p>
+                            <div className='reg__flex'>
+                                <input className='reg__radio' type="checkbox" /> <p className='reg__text2'>Соглашаюсь на обратку персональных данных</p>
+                            </div>
                             <button className='reg__btn'>Отправить</button>
                         </form>
                     </li>
@@ -51,13 +53,13 @@ const Reg = () => {
                         <form onSubmit={sendMessage} className='reg__form2'>
                             <label htmlFor="title2">Авторизации</label>
                             <input className='reg__input2' 
-                            type="email" 
-                            placeholder='E-mail' 
+                            type="text" 
+                            placeholder='Text' 
                             value={text}
                             onChange={(e)=>setText(e.target.value)}
                             />
                             <input className='reg__input2' 
-                            type="password" 
+                            type="number" 
                             placeholder='Пароль' 
                             value={number}
                             onChange={(e)=>setNumber(e.target.value)}
