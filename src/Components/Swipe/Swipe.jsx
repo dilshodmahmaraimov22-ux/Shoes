@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
-import shop1 from '../Images.shop1.png'
-import shop2 from '../Images.shop2.png'
-import shop3 from '../Images.shop3.png'
+import foto1 from '../Images/foto1.png'
+import foto2 from '../Images/foto2.png'
+import foto3 from '../Images/foto3.png'
 import './Swipe.css'
 
 // Rasmlarni shu yerga qo'shing. Rasmdagidek 5 xil poyabzal bo'lsa, ko'proq rasm qo'shing.
-const SLIDES = [shop1, shop2, shop3]
+const SLIDES = [foto1, foto2, foto3]
 
 // markazdan chapga va o'ngga qaysi kartalar chizilishi
 const OFFSETS = [-4, -3, -2, -1, 0, 1, 2, 3, 4]

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg: #212121;
+  --accent: #9a6b41;
+}
+
+.swipe {
+  --w: 252px;
+  --gap: 84px;
+  --step: calc(var(--w) + var(--gap));
+
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  padding: 40px 0 80px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.swipe__title {
+  margin: 0 0 36px;
+  text-align: center;
+  font-size: clamp(28px, 3vw + 12px, 46px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ---------- slider ---------- */
+.swipe__viewport {
+  position: relative;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.swipe__track {
+  position: relative;
+  height: calc(var(--w) * 4 / 3);
+}
+
+.swipe__slide {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--w);
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transform: translateX(calc(-50% + var(--off) * var(--step)));
+  transition: transform 0.45s ease;
+  user-select: none;
+}
+
+.swipe__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* xira kartalar */
+.swipe__slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(33, 33, 33, 0.6);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.swipe__slide[data-dim='true']::after {
+  opacity: 1;
+}
+
+/* ---------- strelkalar ---------- */
+.swipe__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: filter 0.2s ease;
+}
+
+.swipe__btn:hover {
+  filter: brightness(1.15);
+}
+
+.swipe__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.swipe__btn--prev {
+  left: calc(50% - var(--step) * 1.5 + 14px);
+}
+
+.swipe__btn--next {
+  left: calc(50% + var(--step) * 1.5 - 14px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .swipe {
+    --w: 200px;
+    --gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swipe {
+    --w: 170px;
+    --gap: 24px;
+    padding: 32px 0 56px;
+  }
+
+  .swipe__title {
+    margin-bottom: 24px;
+  }
+}
+
+/* telefon: markazda 1 ta katta karta, yonlarida xira kartalar ko'rinib turadi */
+@media (max-width: 560px) {
+  .swipe {
+    --w: min(68vw, 280px);
+    --gap: 14px;
+  }
+
+  .swipe__slide:not([data-off='0'])::after {
+    opacity: 1;
+  }
+
+  .swipe__btn {
+    transform: translateY(-50%);
+  }
+
+  .swipe__btn--prev {
+    left: 8px;
+  }
+
+  .swipe__btn--next {
+    left: auto;
+    right: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swipe__slide,
+  .swipe__slide::after {
+    transition: none;
+  }
+}
