@@ -41,7 +41,8 @@ const Header = () => {
             {open && (
               <div className="nav__menu">
                 <Link to="/video" onClick={() => setOpen(false)}>Видео галерея</Link>
-                <Link to="/" onClick={() => setOpen(false)}>Фото галерея</Link>
+                <Link to="/rasm" onClick={() => setOpen(false)}>Фото галерея</Link>
+                <Link to="/" onClick={() => setOpen(false)}>Home</Link>
               </div>
             )}
           </li>

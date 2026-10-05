@@ -4,10 +4,8 @@ import foto2 from '../Images/foto2.png'
 import foto3 from '../Images/foto3.png'
 import './Swipe.css'
 
-// Rasmlarni shu yerga qo'shing. Rasmdagidek 5 xil poyabzal bo'lsa, ko'proq rasm qo'shing.
 const SLIDES = [foto1, foto2, foto3]
 
-// markazdan chapga va o'ngga qaysi kartalar chizilishi
 const OFFSETS = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
 
 const Swipe = () => {
