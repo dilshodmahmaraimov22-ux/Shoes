@@ -6,10 +6,18 @@ const Reg = () => {
     const [text, setText] = useState("");
     const [number, setNumber] = useState();
 
-    const sendMessage = (e)=>{
+    const BOT_TOKEN = "AAF8Plq3fObfaTIkKH2JEcrbmsJFMD6FZ0c";
+    const chat_id = "6812225312";
+
+    const sendMessage = async(e)=>{
         e.preventDefault();
-        console.log(text, number);
         
+        const xabar = `yangi xabar ${text}\n tel: ${number}`
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
+        
+        try{
+            axios
+        }
     }
   return (
     <>
