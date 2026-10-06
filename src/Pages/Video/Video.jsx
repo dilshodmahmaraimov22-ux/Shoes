@@ -1,10 +1,10 @@
 import React from 'react'
-import Video from '../../Components/Video/Video'
+import Vid from '../../Components/Vid/Vid'
 
 const Video = () => {
   return (
     <>
-    <Video/>
+    <Vid/>
     </>
   )
 }
