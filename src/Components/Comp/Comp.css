@@ -16,7 +16,6 @@
   line-height: 1.2;
 }
 
-/* ---------- Tepa qism ---------- */
 .comp__top {
   display: flex;
   align-items: flex-start;
@@ -27,16 +26,16 @@
 
 .comp__text {
   flex: 1 1 50%;
-  max-width: 350px;
+  max-width: 450px;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
 }
 
 .comp__brand {
   color: var(--accent);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -57,16 +56,18 @@
 .comp__photo--1 {
   top: 0;
   right: 0;
-  width: 350px;
-  height: 108px;
+  width: 550px;
+  height: 308px;
 }
 
 .comp__photo--2 {
   top: 90px;
   left: -42px;
-  width: 182px;
+  width: 382px;
   height: 110px;
   z-index: 1;
+  left: -220px;
+  top: 200px;
 }
 
 .comp__photo--3 {
@@ -76,13 +77,13 @@
   height: 92px;
 }
 
-/* ---------- Video ---------- */
 .comp__video {
   position: relative;
   width: 100%;
   aspect-ratio: 583 / 315;
   overflow: hidden;
   background: #000;
+  margin-top: 100px;
 }
 
 .comp__cover,
@@ -120,7 +121,6 @@
   border-radius: 50%;
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .comp {
     padding: 32px 0 56px;
