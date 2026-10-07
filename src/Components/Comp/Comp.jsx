@@ -2,19 +2,9 @@ import React, { useRef, useState } from 'react'
 import photo1 from '../Images/photo1.jpg'
 import photo2 from '../Images/photo2.jpg'
 import photo3 from '../Images/photo3.png'
-// import cover from '../Images/comp-cover.png'
-// import video from '../Images/comp-video.mp4'
 import './Comp.css'
 
 const Comp = () => {
-  const [playing, setPlaying] = useState(false)
-  const videoRef = useRef(null)
-
-  const handlePlay = () => {
-    setPlaying(true)
-    setTimeout(() => videoRef.current?.play(), 0)
-  }
-
   return (
     <section className="comp">
       <div className="container">
@@ -39,16 +29,9 @@ const Comp = () => {
         </div>
 
         <div className="comp__video">
-          {playing ? (
-            <video ref={videoRef} className="comp__player" src={photo3} controls />
-          ) : (
             <>
               <img className="comp__cover" src={photo3} alt="" />
               <button
-                type="button"
-                className="comp__play"
-                onClick={handlePlay}
-                aria-label="Videoni ochish"
               >
                 <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
                   <circle cx="40" cy="40" r="37" stroke="#fff" strokeWidth="4" />
@@ -56,7 +39,6 @@ const Comp = () => {
                 </svg>
               </button>
             </>
-          )}
         </div>
       </div>
     </section>
