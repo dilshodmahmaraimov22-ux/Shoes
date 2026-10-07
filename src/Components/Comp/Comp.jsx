@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
-import photo1 from '../Images/comp-photo1.png'
-import photo2 from '../Images/comp-photo2.png'
-import photo3 from '../Images/comp-photo3.png'
-import cover from '../Images/comp-cover.png'
-import video from '../Images/comp-video.mp4'
+import photo1 from '../Images/photo1.jpg'
+import photo2 from '../Images/photo2.jpg'
+import photo3 from '../Images/photo3.png'
+// import cover from '../Images/comp-cover.png'
+// import video from '../Images/comp-video.mp4'
 import './Comp.css'
 
 const Comp = () => {
@@ -34,16 +34,16 @@ const Comp = () => {
           <div className="comp__photos">
             <img className="comp__photo comp__photo--1" src={photo1} alt="" />
             <img className="comp__photo comp__photo--2" src={photo2} alt="" />
-            <img className="comp__photo comp__photo--3" src={photo3} alt="" />
+            <img className="comp__photo comp__photo--3" src={photo1} alt="" />
           </div>
         </div>
 
         <div className="comp__video">
           {playing ? (
-            <video ref={videoRef} className="comp__player" src={video} controls />
+            <video ref={videoRef} className="comp__player" src={photo3} controls />
           ) : (
             <>
-              <img className="comp__cover" src={cover} alt="" />
+              <img className="comp__cover" src={photo3} alt="" />
               <button
                 type="button"
                 className="comp__play"
