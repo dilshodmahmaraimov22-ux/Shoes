@@ -4,6 +4,7 @@ import Layout from './Components/Layout/Layout'
 import Rasm from './Pages/Rasm/Rasm'
 import Video from './Pages/Video/Video'
 import Home from './Pages/Home/Home'
+import About from './Pages/About/About'
  
  const App = () => {
    return (
@@ -14,6 +15,7 @@ import Home from './Pages/Home/Home'
                                <Route path='/' element={<Home/>}/>
                                <Route path='/Rasm' element={<Rasm/>}/>
                                <Route path='/Video' element={<Video/>}/>
+                               <Route path='/About' element={<About/>}/>
                          </Route>
                   </Routes>
     </BrowserRouter>

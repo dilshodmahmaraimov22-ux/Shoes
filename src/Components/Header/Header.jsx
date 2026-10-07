@@ -42,6 +42,7 @@ const Header = () => {
               <div className="nav__menu">
                 <Link to="/video" onClick={() => setOpen(false)}>Видео галерея</Link>
                 <Link to="/rasm" onClick={() => setOpen(false)}>Фото галерея</Link>
+                <Link to="/about" onClick={() => setOpen(false)}>About</Link>
                 <Link to="/" onClick={() => setOpen(false)}>Home</Link>
               </div>
             )}

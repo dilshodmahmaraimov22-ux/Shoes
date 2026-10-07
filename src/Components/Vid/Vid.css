@@ -18,7 +18,6 @@
   padding: 0 16px;
 }
 
-/* ---------- sarlavha ---------- */
 .vid__title {
   margin: 0 0 40px;
   text-align: center;
@@ -27,7 +26,6 @@
   line-height: 1.2;
 }
 
-/* ---------- to'r ---------- */
 .vid__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -62,7 +60,6 @@
   line-height: 21px;
 }
 
-/* ---------- Show more ---------- */
 .vid__more {
   display: flex;
   justify-content: center;
@@ -88,7 +85,6 @@
   outline-offset: 4px;
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
   .vid__list {
     gap: 48px 32px;

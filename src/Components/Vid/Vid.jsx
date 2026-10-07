@@ -6,7 +6,6 @@ import './Vid.css'
 const TEXT =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.'
 
-// 9 ta video. Har biriga o'z rasmi va havolasini berish mumkin.
 const VIDEOS = Array.from({ length: 9 }, (_, i) => ({
   id: i + 1,
   img: vid,
