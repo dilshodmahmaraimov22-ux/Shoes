@@ -1,10 +1,10 @@
 import React from 'react'
-import gift from '../Images/info-gift.png'
-import icon1 from '../Images/info-icon1.png'
-import icon2 from '../Images/info-icon2.png'
-import icon3 from '../Images/info-icon3.png'
-import icon4 from '../Images/info-icon4.png'
-import icon5 from '../Images/info-icon5.png'
+import gift from '../Images/gift.png'
+import icon1 from '../Images/icon1.png'
+import icon2 from '../Images/icon2.png'
+import icon3 from '../Images/icon3.png'
+import icon4 from '../Images/icon4.png'
+import icon5 from '../Images/icon5.png'
 import './Info.css'
 
 const DELIVERY = [
