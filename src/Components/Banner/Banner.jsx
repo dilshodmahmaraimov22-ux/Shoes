@@ -1,18 +1,18 @@
 import React from 'react'
-import bg from '../Images/banner-bg.png'
-import icon1 from '../Images/banner-icon1.png'
-import icon2 from '../Images/banner-icon2.png'
-import icon3 from '../Images/banner-icon3.png'
-import icon4 from '../Images/banner-icon4.png'
-import icon5 from '../Images/banner-icon5.png'
+import bg from '../Images/bg.jpg'
+import icons1 from '../Images/icons1.png'
+import icons2 from '../Images/icons2.png'
+import icons3 from '../Images/icons3.png'
+import icons4 from '../Images/icons4.png'
+import icons5 from '../Images/icons5.png'
 import './Banner.css'
 
 const ITEMS = [
-  { icon: icon1, text: 'Оперативно отвечаем на все заявки.' },
-  { icon: icon2, text: 'Экономия времени, не надо ни куда ходить.' },
-  { icon: icon3, text: 'Курьер бесплатно заберёт и привезёт.' },
-  { icon: icon4, text: 'Гарантия 30 дней на все услуги.' },
-  { icon: icon5, text: 'Высокое качество работ.' },
+  { icon: icons1, text: 'Оперативно отвечаем на все заявки.' },
+  { icon: icons2, text: 'Экономия времени, не надо ни куда ходить.' },
+  { icon: icons3, text: 'Курьер бесплатно заберёт и привезёт.' },
+  { icon: icons4, text: 'Гарантия 30 дней на все услуги.' },
+  { icon: icons5, text: 'Высокое качество работ.' },
 ]
 
 const Banner = () => {
